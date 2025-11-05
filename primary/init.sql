@@ -17,6 +17,6 @@ CREATE USER IF NOT EXISTS 'rootuser'@'%' IDENTIFIED BY 'grupof.pass';
 GRANT SELECT, INSERT, UPDATE, DELETE ON `aula-db`.* TO 'rootuser'@'%';
 
 CREATE USER IF NOT EXISTS 'replicuser'@'%' IDENTIFIED BY 'grupof.pass';
-GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'replicuser'@'%';
+GRANT SELECT, REPLICATION SLAVE ON *.* TO 'replicuser'@'%';
 
 FLUSH PRIVILEGES;

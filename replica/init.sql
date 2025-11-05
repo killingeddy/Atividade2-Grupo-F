@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS produto (
 CREATE USER IF NOT EXISTS 'repl'@'%' IDENTIFIED BY 'replpass';
 GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%';
 
-CREATE USER IF NOT EXISTS 'appuser'@'%' IDENTIFIED BY 'apppass';
-GRANT ALL PRIVILEGES ON *.* TO 'appuser'@'%' WITH GRANT OPTION;
+CREATE USER IF NOT EXISTS 'replicuser'@'%' IDENTIFIED BY 'grupof.pass';
+GRANT SELECT ON `aula-db`.* TO 'replicuser'@'%';
 
 FLUSH PRIVILEGES;
