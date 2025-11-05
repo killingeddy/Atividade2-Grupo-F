@@ -18,4 +18,7 @@ GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%';
 CREATE USER IF NOT EXISTS 'appuser'@'%' IDENTIFIED BY 'apppass';
 GRANT ALL PRIVILEGES ON *.* TO 'appuser'@'%' WITH GRANT OPTION;
 
+SET GLOBAL read_only=ON;
+SET GLOBAL super_read_only=ON;
+
 FLUSH PRIVILEGES;

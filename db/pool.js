@@ -1,3 +1,4 @@
+// db/pool.js
 const mysql = require("mysql2/promise");
 const { writeDb, readDb } = require("./connections");
 

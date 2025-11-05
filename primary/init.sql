@@ -12,7 +12,6 @@ CREATE TABLE IF NOT EXISTS produto (
   UNIQUE(descricao, criado_por)
 );
 
-
 CREATE USER IF NOT EXISTS 'rootuser'@'%' IDENTIFIED BY 'grupof.pass';
 GRANT SELECT, INSERT, UPDATE, DELETE ON `aula-db`.* TO 'rootuser'@'%';
 

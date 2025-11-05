@@ -21,4 +21,6 @@ services:
       - "3308:3306"
     volumes:
       - ./replica/my.cnf:/etc/mysql/conf.d/my.cnf
-      
+      - ./replica/init.sql:/docker-entrypoint-initdb.d/init.sql
+    depends_on:
+      - mysql-primary
